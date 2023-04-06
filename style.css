@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+/*
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
+ */
+
+:root {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#matrix {
+    position: absolute;
+    /* width: 100vw;
+    height: 100vh; */
+    z-index: 1;
+}
+#dim-filter {
+    background-color: hsla(0, 0%, 0%, .8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2;
+}
+
+header {
+    z-index: 10;
+    /* background-color: aquamarine; */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#JT {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    background-color: aquamarine;
+    padding: 1rem;
+}
+
+#QAM {
+    font-size: 1.5rem;
+    background-color: aquamarine;
+    padding: 1rem;
+}
