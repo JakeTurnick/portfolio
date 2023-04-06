@@ -5,8 +5,15 @@
     font-family: 'Rubik', sans-serif;
  */
 
+
+/* Universal & Base styles */
+
 :root {
     box-sizing: border-box;
+}
+
+* {
+    color: aquamarine;
 }
 
 a {
@@ -32,12 +39,18 @@ body {
     height: 100vh;
     position: absolute;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+/* Top & Header */
 
 header {
     z-index: 10;
     /* background-color: aquamarine; */
     padding: 1rem;
+    margin: 2rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,14 +60,97 @@ header {
 #JT {
     font-size: 1.5rem;
     font-weight: 800;
-    color: black;
     font-family: 'Quicksand', sans-serif;
+    color: black;
     background-color: aquamarine;
+    border: 2px solid black;
     padding: 1rem;
+    transition-property: color, background-color, border;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+#JT:hover {
+    color: aquamarine;
+    background-color: black;
+    border: 2px solid aquamarine;
+}
+
+#expanded-nav > nav > * {
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    background-color: aquamarine;
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 0 .5rem;
+    transition-property: color, background-color, border;
+    transition-duration: .33s;
+    transition-timing-function: ease;
+}
+#expanded-nav > nav > *:hover {
+    color: aquamarine;
+    background-color: black;
+    border: 2px solid aquamarine;
 }
 
 #QAM {
+    display: none;
     font-size: 1.5rem;
     background-color: aquamarine;
+    border: 2px solid black;
     padding: 1rem;
+    transition-property: color, background-color, border;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+#QAM:hover {
+    color: aquamarine;
+    background-color: black;
+    border: 2px solid aquamarine;
+}
+
+@media screen and (max-width: 768px) {
+    #QAM {
+        display: block;
+    }
+    #expanded-nav {
+        display: none;
+    }
+}
+
+/* Main body */
+
+main {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: hsla(0, 0%, 0%, .3);
+}
+main > * {
+    margin-bottom: 20rem;
+}
+
+#introduction > h1 {
+    font-size: 3rem;
+    font-family: 'kanit', sans-serif;
+}
+#introduction > p {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+
+footer {
+    background-color: aquamarine;
+    color: black;
+}
+footer > * {
+    color: black;
+}
+
+#links > * {
+    color: black;
+}
+#links > * > i {
+    color: black;
 }
