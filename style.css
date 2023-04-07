@@ -42,6 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: scroll;
 }
 
 /* Top & Header */
@@ -124,10 +125,12 @@ header {
 main {
     margin: 2rem;
     padding: 2rem;
-    background-color: hsla(0, 0%, 0%, .3);
 }
 main > * {
     margin-bottom: 20rem;
+    padding: 2rem;
+    border: 2px solid aquamarine;
+    background-color: hsla(0, 0%, 0%, .5);
 }
 
 #introduction > h1 {
@@ -143,14 +146,31 @@ main > * {
 footer {
     background-color: aquamarine;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
 }
 footer > * {
     color: black;
 }
 
+#links {
+    display: flex;
+}
 #links > * {
     color: black;
+    padding: 0 1rem;
+    margin: 0;
+    font-size: 1.25rem;
 }
 #links > * > i {
     color: black;
+    padding-right: .25rem;
+}
+#links > *:nth-child(n + 2) {
+    border-left: 2px solid black;
+}
+#links > *:hover {
+    text-decoration: underline;
 }
