@@ -63,7 +63,7 @@ body {
 
 header {
     z-index: 10;
-    /* background-color: aquamarine; */
+    width: 90%;
     padding: 1rem;
     margin: 2rem 1rem;
     display: flex;
@@ -164,7 +164,7 @@ main > * {
     padding: 4rem;
     /* border: 2px solid aquamarine; */
     background-color: hsla(0, 0%, 0%, .5);
-    width: fit-content;
+    width: 90%;
     border-radius: 1rem;
 }
 
@@ -190,7 +190,7 @@ section > h2 {
 /* about */
 
 #about {
-    max-width: 65%;
+    /* max-width: 65%; */
     text-align: center;
 }
 #about > h2 {
