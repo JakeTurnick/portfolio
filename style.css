@@ -5,6 +5,15 @@
     font-family: 'Rubik', sans-serif;
  */
 
+ /* 
+    COLORS:
+        black: #000000
+        aquamarine: #7FFFD4
+        soft-blue: #65C0CA
+        peachy: #F0887D
+        soft-red: #D3313E
+*/
+
 
 /* Universal & Base styles */
 
@@ -70,15 +79,21 @@ header {
     color: black;
     background-color: aquamarine;
     border: 2px solid black;
+    border-radius: 1rem;
     padding: 1rem;
-    transition-property: color, background-color, border;
+    text-decoration: underline;
+    text-decoration-color: #F0887D00;
+    transition-property: color, background-color, border, text-decoration;
     transition-duration: .5s;
     transition-timing-function: ease;
+
 }
 #JT:hover {
     color: aquamarine;
     background-color: black;
     border: 2px solid aquamarine;
+    text-decoration: underline;
+    text-decoration-color: #F0887D;
 }
 
 #expanded-nav > nav > * {
@@ -88,9 +103,12 @@ header {
     color: black;
     background-color: aquamarine;
     border: 2px solid black;
+    border-radius: 1rem;
     padding: 1rem;
     margin: 0 .5rem;
-    transition-property: color, background-color, border;
+    text-decoration: underline;
+    text-decoration-color: #F0887D00;
+    transition-property: color, background-color, border, text-decoration;
     transition-duration: .33s;
     transition-timing-function: ease;
 }
@@ -98,6 +116,8 @@ header {
     color: aquamarine;
     background-color: black;
     border: 2px solid aquamarine;
+    text-decoration: underline;
+    text-decoration-color: #F0887D;
 }
 
 #QAM {
@@ -105,6 +125,7 @@ header {
     font-size: 1.5rem;
     background-color: aquamarine;
     border: 2px solid black;
+    border-radius: 1rem;
     padding: 1rem;
     transition-property: color, background-color, border;
     transition-duration: .5s;
@@ -123,6 +144,10 @@ header {
     #expanded-nav {
         display: none;
     }
+
+    #about {
+        max-width: 100%;
+    }
 }
 
 /* Main body */
@@ -130,12 +155,28 @@ header {
 main {
     margin: 2rem;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 main > * {
-    margin-bottom: 20rem;
-    padding: 2rem;
-    border: 2px solid aquamarine;
+    /* margin-bottom: 20rem; */
+    padding: 4rem;
+    /* border: 2px solid aquamarine; */
     background-color: hsla(0, 0%, 0%, .5);
+    width: fit-content;
+    border-radius: 1rem;
+}
+
+section > h2 {
+    font-size: 2rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* introduction */
+
+#introduction {
+    text-align: center;
 }
 
 #introduction > h1 {
@@ -145,6 +186,30 @@ main > * {
 #introduction > p {
     font-size: 1.5rem;
 }
+
+/* about */
+
+#about {
+    max-width: 65%;
+    text-align: center;
+}
+#about > h2 {
+    text-align: start;
+
+}
+
+
+.text-link {
+    color: #F0887D;
+    padding: .1rem;
+}
+.text-link:hover {
+    color: black;
+    background-color: #F0887D;
+}
+
+
+/* projects */
 
 #project-container {
     display: flex;
@@ -158,10 +223,40 @@ main > * {
     flex-direction: column;
     align-items: center;
     text-align: start;
-    border: 2px solid aquamarine;
+    border: 2px solid #7FFFD433;
+    border-radius: 1rem;
     width: 250px;
     padding: 1rem;
     margin: 1rem;
+    position: relative;
+}
+.project-card::before {
+    background: linear-gradient(transparent, #F0887D, transparent);
+    height: 100px;
+    width: 2px;
+    position: absolute;
+    right: -2px;
+    top: 65%;
+    content: " ";
+    z-index: 20;
+    transition: top 1s ease;
+}
+.project-card:hover::before {
+    top: 10%;
+}
+.project-card::after {
+    background: linear-gradient(transparent, #F0887D, transparent);
+    height: 100px;
+    width: 2px;
+    position: absolute;
+    left: -2px;
+    top: 65%;
+    content: " ";
+    z-index: 20;
+    transition: top 1s ease;
+}
+.project-card:hover::after {
+    top: 10%;
 }
 
 .project-gallery {
@@ -185,37 +280,68 @@ main > * {
     padding: 0 1rem;
 }
 
+/* Contact */
 
-/* Footer */
-
-footer {
-    background-color: aquamarine;
-    color: black;
+#contact {
+    /* border: 2px solid aquamarine; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1rem;
 }
-footer > * {
-    color: black;
+#contact > * {
+    margin: 1rem 0;
 }
 
 #links {
     display: flex;
 }
 #links > * {
-    color: black;
     padding: 0 1rem;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    border-radius: 0;
+    text-decoration: underline;
+    text-decoration-color: #F0887D00;
+    transition: text-decoration .5s ease;
 }
 #links > * > i {
-    color: black;
     padding-right: .25rem;
 }
 #links > *:nth-child(n + 2) {
-    border-left: 2px solid black;
+    border-left: 2px solid aquamarine;
 }
 #links > *:hover {
     text-decoration: underline;
+    text-decoration-color: #F0887D;
+}
+
+#email-link {
+    border: 2px solid aquamarine;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    transition: background-color 1s ease;
+}
+#email-link:hover {
+    color: black;
+    background-color: #F0887D;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-color: aquamarine;
+    color: black;
+    border: none;
+    text-align: center;
+}
+footer > * {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 .25rem;
 }
