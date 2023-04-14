@@ -33,12 +33,41 @@ button {
     background-color: hsla(0, 0%, 0%, 0);
     border: none;
 }
+i {
+    color: aquamarine;
+}
+
+#return-btn {
+    border: 2px solid aquamarine;
+    width: fit-content;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: opacity 1s ease-in;
+    transition-property: background-color, color, border,;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    position: sticky;
+    top: 85vh;
+    left: 85vw;
+    opacity: 0;
+
+}
+#return-btn:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #F0887D;
+}
 
 body {
     background-color: black;
     width: 100vw;
     height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #matrix {
@@ -53,9 +82,6 @@ body {
     height: 100vh;
     position: absolute;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     overflow: scroll;
 }
 
@@ -63,9 +89,8 @@ body {
 
 header {
     z-index: 10;
-    width: 90%;
     padding: 1rem;
-    margin: 2rem 1rem;
+    margin: 1rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -320,7 +345,10 @@ section > h2 {
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.5rem;
-    transition: background-color 1s ease;
+    transition-property: background-color, color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+
 }
 #email-link:hover {
     color: black;

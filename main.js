@@ -26,3 +26,22 @@ function matrix() {
 }
 
 setInterval(matrix, 50);
+
+const returnElement = document.getElementById("dim-filter");
+function scrollToTop() {
+	returnElement.scrollTop = 0;
+}
+
+const returnButton = document.getElementById("return-btn");
+
+function returnVisible() {
+	if (returnElement.scrollTop > 50) {
+		returnButton.style.opacity = 100;
+	} else {
+		returnButton.style.opacity = 0;
+	}
+}
+
+returnElement.addEventListener("scroll", () => {
+	returnVisible();
+});
