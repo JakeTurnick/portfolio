@@ -305,6 +305,69 @@ section > h2 {
     padding: 0 1rem;
 }
 
+/* project section test */
+
+.test-project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    border: 2px solid #7FFFD433;
+    border-radius: 1rem;
+    width: 250px;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+}
+.test-project-card::before {
+    background: linear-gradient(transparent, #F0887D, transparent);
+    height: 100px;
+    width: 2px;
+    position: absolute;
+    right: -2px;
+    top: 65%;
+    content: " ";
+    z-index: 20;
+    transition: top 1s ease;
+}
+.test-project-card:hover::before {
+    top: 10%;
+}
+.test-project-card::after {
+    background: linear-gradient(transparent, #F0887D, transparent);
+    height: 100px;
+    width: 2px;
+    position: absolute;
+    left: -2px;
+    top: 65%;
+    content: " ";
+    z-index: 20;
+    transition: top 1s ease;
+}
+.test-project-card:hover::after {
+    top: 10%;
+}
+
+.test-project-details {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+.test-project-card:hover > .test-project-details{
+    display: flex;
+    background-color: aquamarine;
+    color: black;
+}
+
+.test-project-card:hover {
+    background-color: aquamarine;
+}
+
 /* Contact */
 
 #contact {
